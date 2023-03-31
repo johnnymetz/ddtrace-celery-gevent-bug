@@ -41,7 +41,7 @@ Run the server with ddtrace, celery and gevent. You don't need to have the datad
 ddtrace-run celery -A mysite.celery.app worker --pool=gevent --loglevel=info
 # django.core.exceptions.ImproperlyConfigured: Requested settings, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
 
-DJANGO_SETTINGS_MODULE=mysite.settings ddtrace-run celery -A remix.celery.app worker --pool=gevent --loglevel=info
+DJANGO_SETTINGS_MODULE=mysite.settings ddtrace-run celery -A mysite.celery.app worker --pool=gevent --loglevel=info
 # ModuleNotFoundError: No module named 'mysite'
 ```
 
