@@ -2,7 +2,7 @@
 
 Project to demonstrate a bug with ddtrace, celery and gevent.
 
-Video Demo: TODO
+Video Demo: https://www.loom.com/share/0d2b49c6f7284672a149182094ffef07
 
 ## Setup
 
