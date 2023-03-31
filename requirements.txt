@@ -8,6 +8,8 @@ amqp==5.1.1
     # via kombu
 asgiref==3.6.0
     # via django
+async-timeout==4.0.2
+    # via redis
 attrs==22.2.0
     # via
     #   cattrs
@@ -15,12 +17,6 @@ attrs==22.2.0
     #   jsonschema
 billiard==3.6.4.0
     # via celery
-boto3==1.26.103
-    # via -r requirements.in
-botocore==1.29.103
-    # via
-    #   boto3
-    #   s3transfer
 bytecode==0.14.0
     # via ddtrace
 cattrs==22.2.0
@@ -47,12 +43,9 @@ django==4.1.7
     # via
     #   -r requirements.in
     #   django-extensions
-    #   django-storages
 django-environ==0.10.0
     # via -r requirements.in
 django-extensions==3.2.1
-    # via -r requirements.in
-django-storages==1.13.2
     # via -r requirements.in
 envier==0.4.0
     # via ddtrace
@@ -60,10 +53,6 @@ gevent==22.10.2
     # via -r requirements.in
 greenlet==2.0.2
     # via gevent
-jmespath==1.0.1
-    # via
-    #   boto3
-    #   botocore
 jsonschema==4.17.3
     # via ddtrace
 kombu==5.2.4
@@ -78,26 +67,21 @@ protobuf==4.22.1
     #   ddtrace
 pyrsistent==0.19.3
     # via jsonschema
-python-dateutil==2.8.2
-    # via botocore
 pytz==2023.3
     # via celery
-s3transfer==0.6.0
-    # via boto3
+redis==4.5.4
+    # via -r requirements.in
 six==1.16.0
     # via
     #   click-repl
     #   ddsketch
     #   ddtrace
-    #   python-dateutil
 sqlparse==0.4.3
     # via django
 tenacity==8.2.2
     # via ddtrace
 typing-extensions==4.5.0
     # via ddtrace
-urllib3==1.26.15
-    # via botocore
 vine==5.0.0
     # via
     #   amqp

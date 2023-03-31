@@ -1,8 +1,7 @@
 Django
 django-environ
 django-extensions
-django-storages
-boto3
+ddtrace
 celery
 gevent
-ddtrace
+redis

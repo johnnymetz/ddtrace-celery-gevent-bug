@@ -35,7 +35,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "bug.apps.BugConfig",
+    # third-party apps
+    "django_extensions",
+    # local apps,
+    "core.apps.CoreConfig",
 ]
 
 MIDDLEWARE = [
@@ -114,3 +117,5 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 REDIS_URL = env("REDIS_URL")
+CELERY_BROKER_URL = REDIS_URL
+CELERY_RESULT_BACKEND = REDIS_URL
