@@ -35,7 +35,7 @@ docker compose up -d
 
 ## Bug
 
-Run the server with ddtrace, celery and gevent. You don't need to have the datadog agent running (bug occurs with and without it).
+Run the server with ddtrace, celery and gevent. You don't need to have the datadog agent running (bug occurs with and without it). Notice the celery fails to start, with and without `DJANGO_SETTINGS_MODULE` set.
 
 ```bash
 ddtrace-run celery -A mysite.celery.app worker --pool=gevent --loglevel=info
@@ -44,6 +44,8 @@ ddtrace-run celery -A mysite.celery.app worker --pool=gevent --loglevel=info
 DJANGO_SETTINGS_MODULE=mysite.settings ddtrace-run celery -A remix.celery.app worker --pool=gevent --loglevel=info
 # ModuleNotFoundError: No module named 'mysite'
 ```
+
+Definition of done: the celery worker starts and can successfully process tasks. You can trigger a task via the `./manage.py runscript script` command.
 
 ## Other run configurations that work
 
